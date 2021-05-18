@@ -27,4 +27,4 @@ Right click on pom.xml, Run As -> Maven Install. You are expected to see a failu
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
 ```
 
-You will need to remove `<pluginRepository>` and `<repository>` regarding to https://sandec.bintray.com/repo because the latter has been sunset.
+Replace https://bintray.com/sandec/repo to https://sandec.jfrog.io/artifactory/repo/ in the whole POM because the former has been sunset.
