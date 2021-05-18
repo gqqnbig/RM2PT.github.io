@@ -31,5 +31,7 @@ Replace https://bintray.com/sandec/repo to https://sandec.jfrog.io/artifactory/r
 
 Then run `Maven Install` again, you should see a different error: "Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M1:test (default-test) on project com.rm2pt.c: No tests were executed!" This indicates a correct setup.
 
+In case your RM2PT chokes, delete `C:\Users\%UserName%\.m2` and restart RM2PT.
+
 [1] https://www.jpro.one/?page=docs/current/1.1/Let's%20get%20started <br>
 [2] https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/
