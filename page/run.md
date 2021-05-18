@@ -38,19 +38,19 @@ Replace https://bintray.com/sandec/repo to https://sandec.jfrog.io/artifactory/r
 
 Then run `Maven Install` again, you should see a different error: "Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M1:test (default-test) on project com.rm2pt.c: No tests were executed!" This indicates a correct setup.
 
-In case your RM2PT chokes, delete `C:\Users\%UserName%\.m2` and restart RM2PT.
+In case your RM2PT (Eclipse) chokes, delete `C:\Users\%UserName%\.m2` and restart RM2PT (Eclipse).
 
 ## Fix remodel file
-Open a.remodel, its content is 
+Open `a.remodel`, its content is 
 
 ```
 UseCaseModel A {Service DSystem {} Service ThirdPartyServices {}}
 DomainModel A {}
 ```
 
-If you right-click on the file, choose `RM2PT -> OO Prototype -> Generate Desktop Prototype (Internel)`, RM2PT will generate files in `src-gen` folder, with errors. For instance, `src-gen\entities\EntityManager.java` has error "Unreachable catch block for ClassNotFoundException". You may manually fix the auto-generated file and  right-click on `src-gen\gui\Main.java`, choose `Debug As -> Java Application`. RM2PT console will say "JavaFX runtime components are missing, and are required to run this application."
+If you right-click on the file, choose `RM2PT -> OO Prototype -> Generate Desktop Prototype (Internel)`, RM2PT will generate files in `src-gen` folder, with errors. For instance, `src-gen\entities\EntityManager.java` has error "Unreachable catch block for ClassNotFoundException". You may manually fix the auto-generated file and  right-click on `src-gen\gui\Main.java`, choose `Debug As -> Java Application`. RM2PT (Eclipse) console will say "JavaFX runtime components are missing, and are required to run this application."
 
-You must add `--module-path "C:\Program Files\javafx-sdk-14.0.2\lib" --add-modules javafx.controls,javafx.fxml`, assuming your JavaFX is installed in the mentioned path, to VM arguments to the run/debug configuration.
+You must add `--module-path "C:\Program Files\javafx-sdk-14.0.2\lib" --add-modules javafx.controls,javafx.fxml`, assuming your JavaFX is installed in the mentioned path, to VM arguments of the run/debug configuration.
 
 Debug again, you are expected to see a different error: "java.lang.NullPointerException: Location is required." If you add breakpoints, you will realize the program does run, but fails to find `Prototype.fxml`.
 
@@ -149,7 +149,7 @@ DomainModel A {
 }
 ```
 
-RM2PT may highlight a quick fix on `UseCaseModel A`, "Create system service", you will click it, and you will restart RM2PT.
+RM2PT (Eclipse) may highlight a quick fix on `UseCaseModel A`, "Create system service", you will click it, and you will restart RM2PT (Eclipse).
 
 With the magic content,  choose `RM2PT -> OO Prototype -> Generate Desktop Prototype (Internel)` again on `a.remodel`. This time you will see `Prototype.fxml` and `Prototype.css` generated in the `gui` package. Run/Debug `Main.java` again, a wonderful GUI window shall pop up.
 
