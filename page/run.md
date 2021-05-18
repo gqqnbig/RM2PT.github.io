@@ -1,5 +1,5 @@
 
-Right click on pom.xml, Run As -> Maven Install. You are expected to see a failure.
+Right click on pom.xml, `Run As -> Maven Install`. You are expected to see a failure.
 
 ```
 [INFO] Scanning for projects...
@@ -28,3 +28,5 @@ Right click on pom.xml, Run As -> Maven Install. You are expected to see a failu
 ```
 
 Replace https://bintray.com/sandec/repo to https://sandec.jfrog.io/artifactory/repo/ in the whole POM because the former has been sunset.
+
+Then run `Maven Install` again, you should see a different error: "Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M1:test (default-test) on project com.rm2pt.c: No tests were executed!" This indicates a correct setup.
