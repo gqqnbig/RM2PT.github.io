@@ -149,7 +149,7 @@ DomainModel A {
 }
 ```
 
-Then RM2PT highlights a quick fix on `UseCaseModel D`, "Create system service", you will click it. Next, restart RM2PT.
+RM2PT may highlight a quick fix on `UseCaseModel A`, "Create system service", you will click it, and you will restart RM2PT.
 
 With the magic content,  choose `RM2PT -> OO Prototype -> Generate Desktop Prototype (Internel)` again on `a.remodel`. This time you will see `Prototype.fxml` and `Prototype.css` generated in the `gui` package. Run/Debug `Main.java` again, a wonderful GUI window shall pop up.
 
