@@ -27,6 +27,9 @@ Right click on pom.xml, `Run As -> Maven Install`. You are expected to see a fai
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
 ```
 
-Replace https://bintray.com/sandec/repo to https://sandec.jfrog.io/artifactory/repo/ in the whole POM because the former has been sunset.
+Replace https://bintray.com/sandec/repo to https://sandec.jfrog.io/artifactory/repo/ [1] in the whole POM because the former has been sunset [2].
 
 Then run `Maven Install` again, you should see a different error: "Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M1:test (default-test) on project com.rm2pt.c: No tests were executed!" This indicates a correct setup.
+
+[1] https://www.jpro.one/?page=docs/current/1.1/Let's%20get%20started <br>
+[2] https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/
