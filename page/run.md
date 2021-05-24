@@ -40,7 +40,7 @@ Then run `Maven Install` again, you should see a different error: "Failed to exe
 
 In case your RM2PT (Eclipse) chokes, delete `C:\Users\%UserName%\.m2` and restart RM2PT (Eclipse).
 
-## Fix remodel file
+## Fix run/debug configuration
 Open `a.remodel`, its content is 
 
 ```
@@ -54,6 +54,7 @@ You must add `--module-path "C:\Program Files\javafx-sdk-14.0.2\lib" --add-modul
 
 Debug again, you are expected to see a different error: "java.lang.NullPointerException: Location is required." If you add breakpoints, you will realize the program does run, but fails to find `Prototype.fxml`.
 
+## Fix remodel file
 Confirmed with RM2PT developers, the initial project will not run, manual revision is required. Replace `a.remodel` with the following content. Note, if your project is not named `A`, you must replace it with your project name.
 
 ```
