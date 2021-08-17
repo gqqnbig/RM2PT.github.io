@@ -50,7 +50,7 @@ DomainModel A {}
 
 If you right-click on the file, choose `RM2PT -> OO Prototype -> Generate Desktop Prototype (Internel)`, RM2PT will generate files in `src-gen` folder, with errors. For instance, `src-gen\entities\EntityManager.java` has error "Unreachable catch block for ClassNotFoundException". You may manually fix the auto-generated file and  right-click on `src-gen\gui\Main.java`, choose `Debug As -> Java Application`. RM2PT (Eclipse) console will say "JavaFX runtime components are missing, and are required to run this application."
 
-You must add `--module-path "${env_var:PATH_TO_FX}"  --add-modules javafx.controls,javafx.fxml`, assuming your JavaFX is installed in the mentioned path, to VM arguments of the run/debug configuration.
+You must add `--module-path "${env_var:PATH_TO_FX}"  --add-modules javafx.controls,javafx.fxml`, assuming you've [configured JavaFX properly](https://openjfx.io/openjfx-docs/#install-javafx), to VM arguments of the run/debug configuration.
 
 Debug again, you are expected to see a different error: "java.lang.NullPointerException: Location is required." If you add breakpoints, you will realize the program does run, but fails to find `Prototype.fxml`.
 
